@@ -6,11 +6,12 @@ RUN yum -y install vim && \
 	yum -y install python2-pip && \
 	yum -y install python34-pip && \
 	yum -y install git && \
+	yum -y install ftp && \
 	pip2 install --upgrade pip && \
-    pip3 install --upgrade pip && \
-    pip2 install netmiko && \
-    pip3 install netmiko && \
-    pip2 install ansible && \
+        pip3 install --upgrade pip && \
+        pip2 install netmiko && \
+        pip3 install netmiko && \
+        pip2 install ansible && \
 	pip2 install jinja2 && \
 	pip3 install jinja2 && \ 
 	pip2 install Requests && \ 
@@ -33,7 +34,7 @@ RUN yum -y install vim && \
 	mkdir -p /usr/share/ansible/plugins/modules && \
 	cd /usr/share/ansible/plugins/modules && \
 	git clone https://github.com/networktocode/ntc-ansible --recursive && \
-	git config --global http.sslverify false
+	git config --global http.sslVerify false
 
 RUN chgrp -R 0 /home && \
     chmod -R g=u /home && \
