@@ -10,12 +10,11 @@ RUN yum -y install vim && \
 	yum -y install gcc && \
 	yum -y install gcc-c++ && \
 	yum -y install git && \
-	yum -y install ftp && \
 	pip2 install --upgrade pip && \
-        pip3 install --upgrade pip && \
-        pip2 install netmiko && \
-        pip3 install netmiko && \
-        pip2 install ansible && \
+    pip3 install --upgrade pip && \
+    pip2 install netmiko && \
+    pip3 install netmiko && \
+    pip2 install ansible && \
 	pip2 install jinja2 && \
 	pip3 install jinja2 && \ 
 	pip2 install Requests && \ 
@@ -47,7 +46,7 @@ RUN yum -y install vim && \
 	mkdir -p /usr/share/ansible/plugins/modules && \
 	cd /usr/share/ansible/plugins/modules && \
 	git clone https://github.com/networktocode/ntc-ansible --recursive && \
-	git config --global http.sslVerify false
+	git config --global http.sslverify false
 
 WORKDIR /home/automationUser
 
