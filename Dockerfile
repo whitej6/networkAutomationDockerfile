@@ -14,9 +14,13 @@ RUN yum -y install vim && \
 	yum -y install scp %% \
 	yum -y install sl && \
 	yum -y install cowsay && \
+	yum -y install sshpass && \
+	yum -y install zip && \
 	pip2 install --upgrade pip && \
         pip3 install --upgrade pip && \
-        pip2 install netmiko && \
+ 	pip2 install beautifulsoup4 && \ 
+ 	pip3 install beautifulsoup4 && \
+        pip2 install netmiko && \
         pip3 install netmiko && \
         pip2 install ansible && \
 	pip2 install jinja2 && \
